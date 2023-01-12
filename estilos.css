@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    gap: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card{
+    width: 300px;
+    height: 380px;
+    border-radius: 12px;
+    box-shadow: 0 70px 63px -60px #000000;
+    position: relative;
+    background: url(img/1.jpg) no-repeat;
+    background-position: center;
+    background-size: 300px;
+    transition: background-size 500ms ease,
+                background-position 500ms ease;
+}
+
+.card:nth-child(2){
+    background: url(img/2.jpg) no-repeat;
+    background-position: center;
+    background-size: 300px;
+}
+
+.card:nth-child(3){
+    background: url(img/3.jpg) no-repeat;
+    background-position: center;
+    background-size: 300px;
+}
+
+.card:hover{
+    background-size: 600px;
+    background-position: center left;
+}
+
+.card-border{
+    position: absolute;
+    border: 2px solid #fff;
+    width: 280px;
+    height: 360px;
+    right: 50%;
+    top: 50%;
+    transform: translateX(50%) translateY(-50%);
+    border-radius: 10px;
+    display: grid;
+    opacity: 0;
+    transition: opacity 700ms ease;
+}
+
+.card:hover .card-border{
+    opacity: 1;
+}
+
+.card-titles{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.card-titles h1{
+    text-transform: capitalize;
+    font-size: 24px;
+    color: #fff;
+}
+
+.card-icons{
+    position: absolute;
+    display: grid;
+    height: auto;
+    top: 210px;
+    left: 10px;
+    row-gap: 0.9rem;
+}
+
+.card-icons i{
+    color: #fff;
+}
